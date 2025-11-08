@@ -1,17 +1,15 @@
-Movello — Full Default Build (Mock-capable)
--------------------------------------------
-This project deploys to Vercel immediately, even with NO keys.
-When you add keys to .env, features switch from mock to live.
+Movello — Full Default Build (App Router) • v0.3
+------------------------------------------------
+This app compiles on Vercel immediately (no keys required).
+Folders are at the ROOT (no /src), so Vercel finds /app.
 
-Quick start
-1) Upload this folder as a new Vercel project
-2) Build runs with mock data; open /app for the console
-3) Add your .env vars in Vercel → Settings → Environment Variables
-4) Redeploy to activate live services
+Key routes:
+/          – Landing
+/console   – Owner/Staff console (Dashboard, Approvals, Jobs, Dispatch, Map, Billing, Reports, Settings)
+/driver    – Driver area (My Jobs, Availability)
+/customer  – Customer area (Book, My Jobs)
 
-Where to connect services later
-- Auth: (add Clerk or Supabase SDK under src/lib/auth/* and wrap pages)
-- DB: Supabase (create tables; swap mock store for server actions)
-- Payments: add /api/checkout and /api/stripe/webhook
-- Realtime: Ably/Pusher client in /app, server webhook /api/realtime
-- Maps: Mapbox token -> show map on Live Map view
+Convert to live:
+- Add your env vars in Vercel from .env.example
+- Replace the mock store with DB (Supabase) & Stripe endpoints
+- Add Mapbox token to show the live map
