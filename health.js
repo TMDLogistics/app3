@@ -1,0 +1,1 @@
+export default function handler(req,res){res.status(200).json({ok:true,mode:process.env.STRIPE_SECRET_KEY?'live':'mock'})}

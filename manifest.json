@@ -1,0 +1,9 @@
+{
+  "name": "Movello",
+  "short_name": "Movello",
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#064B32",
+  "background_color": "#ffffff",
+  "icons": []
+}
